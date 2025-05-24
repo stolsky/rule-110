@@ -7,6 +7,7 @@ import { generate_random_sequence as random_sequence } from "../simulation/rules
 
 import "./simulation.css"
 
+
 export default () => {
 
     // TODO move all to configuration page

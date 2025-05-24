@@ -1,11 +1,15 @@
+import { random, setup_prng, xmur3, xoshiro128ss } from "../../lib/pseudo-random-number-generators";
+
+
+const hash = xmur3("Rule110")
+setup_prng(xoshiro128ss(hash(), hash(), hash(), hash()))
 
 const Rule110 = (L: number, C: number, R: number) => (C + R + C*R + L*C*R) % 2
 
 const generate_random_sequence = (size: number) => {
     const sequence: number[] = [];
     for (let i = 0; i < size; i = i + 1) {
-        // TODO use PRNG from SiCK
-      sequence.push(Math.random() >= 0.5 ? 1 : 0);
+      sequence.push(random() >= 0.5 ? 1 : 0);
     }
     return sequence
 }
@@ -21,7 +25,7 @@ const generate_random_sequence = (size: number) => {
 //         [1, 0, 1],
 //         [1, 0, 0],
 //         [0, 1, 1],
-//         [0, 1, 0],
+//         [0, 1, 0],const
 //         [0, 0, 1],
 //         [0, 0, 0]
 //     ]
