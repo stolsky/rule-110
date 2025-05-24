@@ -1,0 +1,7 @@
+.Panel {
+    outline: 1px solid #000000;
+    
+    .Content {
+        overflow: hidden;
+    }
+}
