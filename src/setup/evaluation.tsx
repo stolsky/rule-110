@@ -1,4 +1,4 @@
-import { Page } from "../../lib/sick/main"
+import { Page } from "simulation-construction-kit"
 
 
 export default () => {

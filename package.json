@@ -14,7 +14,7 @@
     "chart.js": "^4.4.9",
     "pixi.js": "^8.9.2",
     "pseudo-random-number-generators-ts": "^1.0.0",
-    "simulation-construction-kit": "^0.0.4",
+    "simulation-construction-kit": "^0.0.5",
     "solid-js": "^1.9.6"
   }
 }

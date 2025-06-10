@@ -1,6 +1,7 @@
 import { Application, Graphics, Ticker } from 'pixi.js'
 
-import type { ITask } from '../../lib/sick/task/interfaces'
+import type { ITask } from "simulation-construction-kit"
+
 import { Rule110 } from './rules'
 
 
