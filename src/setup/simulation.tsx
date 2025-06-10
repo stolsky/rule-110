@@ -1,6 +1,4 @@
-import Page from "../../lib/sick/page/page"
-import Visualization from "../../lib/sick/visualization/visualization"
-import Controls from "../../lib/sick/controls/controls"
+import { Controls, Overlay, Page, Panel, Visualization } from "simulation-construction-kit"
 
 import RuleX from "../simulation/scene"
 import { generate_random_sequence as random_sequence } from "../simulation/rules"

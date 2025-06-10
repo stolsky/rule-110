@@ -1,8 +1,0 @@
-.Controls {
-    --padding-size: 0.5rem;
-    display: flex;
-    gap: var(--padding-size);
-    align-items: center;
-    width: fit-content;
-    padding: calc(var(--padding-size) * 0.5);
-}

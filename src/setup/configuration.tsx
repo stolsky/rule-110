@@ -1,4 +1,4 @@
-import Page from "../../lib/sick/page/page"
+import { Page } from "../../lib/sick/main"
 
 
 export default () => {

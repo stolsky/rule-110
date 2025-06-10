@@ -1,4 +1,4 @@
-import { random, setup_prng, xmur3, xoshiro128ss } from "../../lib/pseudo-random-number-generators";
+import { random, setup_prng, xmur3, xoshiro128ss } from "pseudo-random-number-generators-ts"
 
 
 const hash = xmur3("Rule110")
