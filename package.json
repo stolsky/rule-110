@@ -1,20 +1,36 @@
 {
-  "name": "rule-110",
-  "type": "module",
-  "version": "0.1.0",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/solid-js": "^5.1.0",
-    "astro": "^5.9.2",
-    "chart.js": "^4.4.9",
-    "pixi.js": "^8.9.2",
-    "pseudo-random-number-generators-ts": "^1.0.0",
-    "simulation-construction-kit": "^0.0.5",
-    "solid-js": "^1.9.6"
-  }
+    "name": "rule-110",
+    "version": "0.1.0",
+    "description": "Visualization of Rule 110 and other elementary cellular automata of this type.",
+    "author": "stolsky",
+    "homepage": "https://github.com/stolsky/rule-110#readme",
+    "bugs": {
+        "url": "https://github.com/stolsky/rule-110/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stolsky/rule-110.git"
+    },
+    "keywords": [
+        "simulation",
+        "cellular-automata",
+        "elementary-cellular-automata",
+        "rule110"
+    ],
+    "license": "SEE LICENSE IN LICENSE",
+    "type": "module",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/solid-js": "^5.1.0",
+        "astro": "^5.9.2",
+        "pixi.js": "^8.9.2",
+        "pseudo-random-number-generators-ts": "^1.0.0",
+        "simulation-construction-kit": "^0.0.8",
+        "solid-js": "^1.9.6"
+    }
 }

@@ -1,17 +1,36 @@
-import { random, setup_prng, xmur3, xoshiro128ss } from "pseudo-random-number-generators-ts"
-
-
-const hash = xmur3("Rule110")
-setup_prng(xoshiro128ss(hash(), hash(), hash(), hash()))
-
 const Rule110 = (L: number, C: number, R: number) => (C + R + C*R + L*C*R) % 2
 
-const generate_random_sequence = (size: number) => {
-    const sequence: number[] = [];
-    for (let i = 0; i < size; i = i + 1) {
-      sequence.push(random() >= 0.5 ? 1 : 0);
+const calculate_kernel = (k: number[]) => {
+    const MAX = k.length
+    let sum = 0
+    for (let i = 0; i < k.length; i = i + 1) {
+        sum = sum + k[i]
     }
-    return sequence
+    return sum / MAX
+}
+/**
+ * 
+ * @param ki Inner Kernel
+ * @param ko Outer Kernel
+ */
+const SmoothRuleX = (ki: number[], ko: number[]) => {
+
+    if (ki.length == 0 || ko.length == 0) {
+        return 0
+    }
+
+    const ui = calculate_kernel(ki)
+    const uo = calculate_kernel(ko)
+
+    console.log(uo)
+
+    if (ui > 0.6 && uo > 0.15 && uo < 0.6) {
+        return 1
+    }
+    if (ui < 0.3 && uo > 0.25 && uo < 0.7) {
+        return 1
+    }
+    return 0
 }
 
 // const generate_rule = (id: number) => {
@@ -33,5 +52,5 @@ const generate_random_sequence = (size: number) => {
 
 export {
     Rule110,
-    generate_random_sequence
+    SmoothRuleX
 }
