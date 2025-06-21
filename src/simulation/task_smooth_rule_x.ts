@@ -2,7 +2,7 @@ import { Application, Graphics, Ticker } from 'pixi.js'
 
 import { PixiTask, type TPixiRenderer } from "simulation-construction-kit"
 
-import { Rule110, SmoothRuleX } from './rules'
+import { SmoothRuleX } from './rules'
 
 
 // TODO what from Task can be used in a Task parent class -> MyTask extends Task, Task implements ITask
@@ -61,7 +61,6 @@ class Task extends PixiTask {
     protected update = (delta_time: number) => {
         const next_sequence: number[] = []
         // TODO for now hard coded ki and ko size
-        // ki = 3, ko = 7
         for (let i = 0; i < this.sequence.length; i = i + 1) {
             next_sequence[i] = this.rule(
                 this.get_inner_kernel(this.sequence, i, 1), // radius 1 -> size = 3

@@ -1,3 +1,20 @@
+const Rule30 = (L: number, C: number, R: number) => {
+    const sum = L + C + R
+    if (sum === 1 || (L === 0 && C === 1 && R === 1)) {
+        return 1
+    }
+    return 0
+
+}
+
+const Rule90 = (L: number, C: number, R: number) => {
+    const sum = L + C + R
+    if (sum === 3 || sum === 0 || (L === 1 && C === 0 && R === 1) || (L === 0 && C === 1 && R === 0)) {
+        return 0
+    }
+    return 1
+}
+
 const Rule110 = (L: number, C: number, R: number) => (C + R + C*R + L*C*R) % 2
 
 const calculate_kernel = (k: number[]) => {
@@ -8,6 +25,7 @@ const calculate_kernel = (k: number[]) => {
     }
     return sum / MAX
 }
+
 /**
  * 
  * @param ki Inner Kernel
@@ -22,7 +40,7 @@ const SmoothRuleX = (ki: number[], ko: number[]) => {
     const ui = calculate_kernel(ki)
     const uo = calculate_kernel(ko)
 
-    console.log(uo)
+    // console.log(uo)
 
     if (ui > 0.6 && uo > 0.15 && uo < 0.6) {
         return 1
@@ -51,6 +69,8 @@ const SmoothRuleX = (ki: number[], ko: number[]) => {
 // }
 
 export {
+    Rule30,
+    Rule90,
     Rule110,
     SmoothRuleX
 }
