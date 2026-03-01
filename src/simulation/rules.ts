@@ -33,7 +33,7 @@ const calculate_kernel = (k: number[]) => {
  */
 const SmoothRuleX = (ki: number[], ko: number[]) => {
 
-    if (ki.length == 0 || ko.length == 0) {
+    if (ki.length === 0 || ko.length === 0) {
         return 0
     }
 
@@ -42,7 +42,7 @@ const SmoothRuleX = (ki: number[], ko: number[]) => {
 
     // console.log(uo)
 
-    if (ui > 0.6 && uo > 0.15 && uo < 0.6) {
+    if (ui > 0.5 && uo > 0.15 && uo < 0.6) {
         return 1
     }
     if (ui < 0.3 && uo > 0.25 && uo < 0.7) {
