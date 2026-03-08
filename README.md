@@ -9,3 +9,6 @@ With this project I want to test features of my npm package [SiCK (Simulation Co
 Attempt to apply the characteristics of [Smooth-Life](https://en.wikipedia.org/wiki/Life-like_cellular_automaton) like [Lenia](https://en.wikipedia.org/wiki/Lenia) to this project.
 
 [Video Introduction of Lenia](https://www.youtube.com/watch?v=6kiBYjvyojQ&t=259s)
+
+## Inspiration
+[The Coding Train](https://thecodingtrain.com/challenges/179-wolfram-ca)
